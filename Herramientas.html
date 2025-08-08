@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Herramientas </title>
+    <link rel="icon" href="logos/amr_logo-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="Herramientas.css"> 
+    <link rel="stylesheet" type="text/css" href="Global.css"> 
+    <script src="Global.js"></script>   
+    <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+  </head>
+
+  <body>
+<!-- Menu-->
+    <div class="container-fluid">
+
+      <div class="row" style="background-color: #005767">
+        <header>
+      <div class="col-4">
+        <img class="logo" style="display: inline-block;" alt="" src="logos/amr_logo-removebg-preview.png"/> 
+        <h1 class="title" style="display: inline-block; font-family:'Roboto';"> AMR <br> Escritoras</h1> 
+      </div>
+      
+    <nav class="d-flex flex-wrap gap-3">
+   <a href="Inicio AMR.html" class="menu">Inicio</a>
+  <a href="Mecenazgo.html" class="menu">Mecenazgo</a>
+  <a href="Noticias AMR.html" class="menu">Blog</a>
+  <a href="Tienda AMR.html" class="menu">Productos</a>
+  <a href="Servicios AMR.html" class="menu">Servicio Editorial</a>
+  <a href="Fandoms AMR.html" class="menu">Fandoms</a>
+  <a href="Herramientas.html" class="menu">Herramientas</a>
+</nav>
+      <div class="col-4 ms-auto">
+           <div class="search-bar ms-auto d-flex">
+    <input type="text" placeholder="Search" class="form-control me-2" />
+    <button type="submit" class="btn btn-sm btn-light"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+<!-- Íconos de usuario y carrito -->
+<div class="d-flex align-items-center justify-content-end icon-bar">
+  <!-- Carrito -->
+  <div class="cart-icon position-relative me-3">
+    <a href="Carrito.html" class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">0</span>
+    </a>
+  </div>
+
+  <!-- Usuario -->
+ <div class="dropdown user-dropdown">
+    <button class="btn btn-user-icon dropdown-toggle" type="button" id="userMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-user-circle"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userMenuButton">
+      <li><a class="dropdown-item" href="Mi perfil.html"><i class="fas fa-user me-2"></i>Mi perfil</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Favoritos</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-book me-2"></i>Mis libros</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-language me-2"></i>Idioma</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Ayuda</a></li>
+   <li>
+  <a class="dropdown-item" href="#" onclick="toggleDarkMode()" id="toggleDarkBtn">
+    <i id="darkModeIcon" class="fa-solid fa-moon"></i> <span id="darkModeText">Modo oscuro</span>
+  </a>
+</li>
+<li><hr class="dropdown-divider"></li>
+
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Salir</a></li>
+    </ul>
+  </div>
+</div>
+    </div>
+   </div>
+  </header>
+      <div class="tools-header">
+    <h1>Herramientas para Escritores</h1>
+    <p class="lead">Explora recursos visuales y prácticos para mejorar tu proceso creativo</p>
+  </div>
+
+  <div class="container tools-section">
+  <h4>Videos y Tutoriales <span><button class="scroll-btn" onclick="scrollRow('videos', -300)"><i class="fas fa-chevron-left"></i></button> <button class="scroll-btn" onclick="scrollRow('videos', 300)"><i class="fas fa-chevron-right"></i></button></span></h4>
+  <div class="tools-row" id="videos">
+    <div class="tool-card">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/12/41/desk-1869579_1280.jpg" alt="Tutorial">
+      <div class="tool-info">
+        <strong>Cómo crear personajes memorables</strong>
+      </div>
+      <div class="overlay">Breve guía en video para dar profundidad a tus personajes.</div>
+      <button class="añadir-biblioteca"
+        data-titulo="Cómo crear personajes memorables"
+        data-descripcion="Breve guía en video para dar profundidad a tus personajes."
+        data-enlace="https://cdn.pixabay.com/photo/2016/11/29/12/41/desk-1869579_1280.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+  </div>
+
+  <h4 class="mt-5">Presentaciones y PDFs <span><button class="scroll-btn" onclick="scrollRow('pdfs', -300)"><i class="fas fa-chevron-left"></i></button> <button class="scroll-btn" onclick="scrollRow('pdfs', 300)"><i class="fas fa-chevron-right"></i></button></span></h4>
+  <div class="tools-row" id="pdfs">
+    <div class="tool-card">
+      <img src="https://i.pinimg.com/736x/18/82/09/18820947e2008d8367dd0c3d4d1a8933.jpg" alt="Plantilla Wolrdbuilding">
+      <div class="tool-info">
+        <strong>Plantilla Worldbuilding</strong>
+      </div>
+      <div class="overlay">Descárgala para organizar reinos, culturas y geografías.</div>
+      <button class="añadir-biblioteca"
+        data-titulo="Plantilla Worldbuilding"
+        data-descripcion="Descárgala para organizar reinos, culturas y geografías."
+        data-enlace="https://i.pinimg.com/736x/18/82/09/18820947e2008d8367dd0c3d4d1a8933.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+  </div>
+
+  <h4 class="mt-5">Datos de Investigación <span><button class="scroll-btn" onclick="scrollRow('investigacion', -300)"><i class="fas fa-chevron-left"></i></button> <button class="scroll-btn" onclick="scrollRow('investigacion', 300)"><i class="fas fa-chevron-right"></i></button></span></h4>
+  <div class="tools-row" id="investigacion">
+    <div class="tool-card">
+      <img src="Images/DSCN4049.JPG" alt="Botánica">
+      <div class="tool-info">
+        <strong>Botánica para escritores</strong>
+      </div>
+      <div class="overlay">Conoce plantas reales y fantásticas para tus mundos.</div>
+      <button class="añadir-biblioteca"
+        data-titulo="Botánica para escritores"
+        data-descripcion="Conoce plantas reales y fantásticas para tus mundos."
+        data-enlace="Images/DSCN4049.JPG"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://i.pinimg.com/736x/d4/73/52/d47352a7f4a69bde86642951725f5009.jpg" alt="Calle Medieval">
+      <div class="tool-info">
+        <strong>La Edad Media</strong>
+      </div>
+      <div class="overlay">Aprende sobre la era Medieval para crear mundos fuertes e historias fantásticas, pero realistas.</div>
+      <button class="añadir-biblioteca"
+        data-titulo="La Edad Media"
+        data-descripcion="Aprende sobre la era Medieval para crear mundos fuertes e historias fantásticas, pero realistas."
+        data-enlace="https://i.pinimg.com/736x/d4/73/52/d47352a7f4a69bde86642951725f5009.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://i.pinimg.com/736x/e9/7e/fa/e97efa69e7afd62184a32684b6098cf7.jpg" alt="Medicina">
+      <div class="tool-info">
+        <strong>Medicina y anatomía para escritoras</strong>
+      </div>
+      <div class="overlay">Para torturar a tus personajes de forma más realista ;3</div>
+      <button class="añadir-biblioteca"
+        data-titulo="Medicina y anatomía para escritoras"
+        data-descripcion="Para torturar a tus personajes de forma más realista ;3"
+        data-enlace="https://i.pinimg.com/736x/e9/7e/fa/e97efa69e7afd62184a32684b6098cf7.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+        <div class="tool-card">
+      <img src="https://i.pinimg.com/736x/14/70/70/1470701789bdc2d20637b8c920a8b5a0.jpg" alt="Psiicología">
+      <div class="tool-info">
+        <strong>Psicología para escritores</strong>
+      </div>
+      <div class="overlay">Tus personajes necesitan terapia (Y tú también :D)</div>
+      <button class="añadir-biblioteca"
+        data-titulo="Psicología para escritores"
+        data-descripcion="Tus personajes necesitan terapia (Y tú también :D)"
+        data-enlace="https://i.pinimg.com/736x/14/70/70/1470701789bdc2d20637b8c920a8b5a0.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+        <div class="tool-card">
+      <img src="https://i.pinimg.com/1200x/38/70/55/38705543de77d994ccf2b4ab71c4097f.jpg" alt="Zoología">
+      <div class="tool-info">
+        <strong>Zoología para escritores</strong>
+      </div>
+      <div class="overlay">Para crear criaturas mágicas y entender mejor a los animales </div>
+      <button class="añadir-biblioteca"
+        data-titulo="Zoología para escritoress"
+        data-descripcion="Para crear criaturas mágicas y entender mejor a los animales"
+        data-enlace="https://i.pinimg.com/1200x/38/70/55/38705543de77d994ccf2b4ab71c4097f.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+        <div class="tool-card">
+      <img src="https://i.pinimg.com/736x/71/4a/16/714a16b24bfcd9d6ea20ca6920da2e10.jpg" alt="M. Griega">
+      <div class="tool-info">
+        <strong>Mitología griega</strong>
+      </div>
+      <div class="overlay">Que las musas te ayuden en tu proceso creativo. </div>
+      <button class="añadir-biblioteca"
+        data-titulo="Mitología G"
+        data-descripcion="Que las musas te ayuden en tu proceso creativo."
+        data-enlace="https://i.pinimg.com/736x/71/4a/16/714a16b24bfcd9d6ea20ca6920da2e10.jpg"
+        data-tipo="herramienta">➕ Añadir a Mi Biblioteca</button>
+    </div>
+  </div>
+</div>
+
+     <!-- Footer -->
+      <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Síguenos</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/amr.escritoras/" target="_blank"><i class="fab fa-instagram"></i> AMR escritoras</a></li>
+        <li><a href="https://co.pinterest.com/amrescritoras/" target="_blank"><i class="fab fa-pinterest"></i> AMR escritoras</a></li>
+        <li><a href="https://www.facebook.com/amr.escritoras/" target="_blank"><i class="fab fa-facebook"></i> AMR escritoras</a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-youtube"></i> AMR escritoras</a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-tiktok"></i> AMR escritoras</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li><i class="fas fa-envelope"></i> contacto@amrescritoras.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Medellín, Colombia</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>¿Quienes sómos?</h4>
+      <a href="Pagina AMR Escritoras..html">Sobre Nosotras</a>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <p>&copy; 2025 AMR Escritoras. Todos los derechos reservados.</p>
+      <a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

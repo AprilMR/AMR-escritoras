@@ -1,0 +1,370 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.title{
+color:white;
+
+}
+.logo {
+  width: 100px;;
+  height:auto;
+  float: left;
+   position: relative; 
+}
+h1 {
+  color: rgb(6, 67, 74);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  }
+
+h2 {
+  color: rgb(6, 67, 74);
+  font-family: 'Roboto';
+  font-size: 30px;
+  text-align: center;
+
+  }
+  
+h3 {
+  color:white;
+  background-color: rgb(0, 87, 103); 
+  font-size: 50px;
+  text-align: center;
+  padding: 70px;
+  font-family:'Roboto'
+  }
+h4 {
+  color: black;
+  font-size:20px ;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+h5 {
+  color: black;
+  font-family:'Roboto';
+  font-size: larger;
+  }
+
+p {
+  font-family:'Roboto';
+  font-size: larger;
+}
+li {
+  font-family:'Roboto';
+  font-size: larger;
+
+}
+.contenedor {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.navegation {
+  position: absolute; 
+  top: 6%; 
+  left: 5%; 
+  width: 3%; 
+  height: 2%; 
+  background: #005767FF; /* primary-500 */
+  border-radius: 0px; 
+
+}
+
+.footer {
+  background-color: #004b49;
+  color: white;
+  padding: 3rem 1rem;
+  width: 100%;
+}
+.footer-container {
+  display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  color: #ffc107;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-flex;            /* Keep icon & text side-by-side */
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+}
+
+/* These last two are now redundant, since you already handle .footer-links a above */
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffc107;
+}
+
+.text-center button {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(255, 199, 0);
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: rgb(204, 160, 0) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;  /* Ensures proper centering inside text-center */
+  float: none;            /* REMOVE this */
+  position: static;       /* REMOVE relative + right offset */
+}
+
+
+  
+ .search-bar {
+  max-width: 300px;
+  max-height: 200px;
+  position:relative;
+  top: -27px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: fit-content;
+    background-color: white;
+  border: 2px solid #ffd700; 
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding-left: 44px; 
+  padding-right: 16px; 
+  font-family: 'Roboto'; 
+  font-size: 20px; 
+  line-height: 30px; 
+  font-weight: 400; 
+  outline: none;
+}
+
+.search-icon {
+   color: #555;             
+  font-size: 16px;          
+  margin-right: 8px;        
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.title-custom {
+  font-family: 'Roboto', sans-serif;
+  color:#005767; 
+}
+
+.menu {
+  position: relative;
+  padding: 10px 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffc107;
+  transition: width 0.3s ease;
+}
+
+.menu:hover {
+  color: #ffc107;
+}
+
+.menu:hover::after {
+  width: 100%;
+}
+
+nav{
+  margin-bottom: -30px; /* Adjust as needed */
+}
+.team-card {
+  width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+       background-color: #fffefc;
+  border: 1px solid #eee;
+    }
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen de tarjeta */
+.team-card img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* Nombre */
+.team-card .card-title {
+  font-family: 'Roboto Serif', serif;
+  font-size: 1.1rem;
+  color: #063f45;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* Rol */
+.team-card .role {
+  font-size: 0.9rem;
+  color: #a48c00;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Frase */
+.team-card .fst-italic {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+/* Biografía */
+.team-card .bio {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Responsive ajuste de imagen */
+@media (max-width: 768px) {
+  .team-card img {
+    height: 220px;
+  }
+}
+ .section-spacing {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.container-fluid {
+  flex: 1;
+}
+
+
+.top-right-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1001;
+}
+
+
+/* Contenedor general de los íconos */
+.icon-bar {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1001;
+}
+
+/* Carrito */
+.cart-icon {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.cart-count {
+  background-color: #ffc107;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.btn-user-icon i {
+  color: #ffc107 !important; /* Amarillo vibrante */
+  font-size: 1.5rem !important; /* Tamaño igual al carrito */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+ .btn-user-icon:hover i {
+  color: #fff5cc !important; /* Amarillo claro al pasar el mouse */
+  transform: scale(1.1);/* 🌙 Modo oscuro general */
+body.dark-mode {
+  --bg: #1e1e1e;
+  --primary: #007b94;
+  --accent: #2b2b2b;
+  --highlight: #ffc107;
+  --text-dark: #f0f0f0;
+  --muted: #aaa;
+  background-color: var(--bg);
+  color: var(--text-dark);
+}
+
+body.dark-mode a {
+  color: var(--highlight);
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .stat-box,
+body.dark-mode .sidebar,
+body.dark-mode .profile-header,
+body.dark-mode footer {
+  background-color: #222;
+  color: var(--text-dark);
+}
+
+}

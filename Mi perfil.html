@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Mi perfil </title>
+    <link rel="icon" href="logos/amr_logo-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="Mi perfil.css"> 
+     <link rel="stylesheet" type="text/css" href="Global.css">  
+    <script src="Global.js"></script>
+    <script src="Mi perfil.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesoSme/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+  </head>
+
+  <body>
+<!-- Menu-->
+    <div class="container-fluid">
+
+      <div class="row" style="background-color: #005767">
+        <header>
+      <div class="col-4">
+        <img class="logo" style="display: inline-block;" alt="" src="logos/amr_logo-removebg-preview.png"/> 
+        <h1 class="title" style="display: inline-block; font-family:'Roboto';"> AMR <br> Escritoras</h1> 
+      </div>
+      
+    <nav class="d-flex flex-wrap gap-3">
+   <a href="Inicio AMR.html" class="menu">Inicio</a>
+  <a href="Mecenazgo.html" class="menu">Mecenazgo</a>
+  <a href="Noticias AMR.html" class="menu">Blog</a>
+  <a href="Tienda AMR.html" class="menu">Productos</a>
+  <a href="Servicios AMR.html" class="menu">Servicio Editorial</a>
+  <a href="Fandoms AMR.html" class="menu">Fandoms</a>
+  <a href="Herramientas.html" class="menu">Herramientas</a>
+</nav>
+      <div class="col-4 ms-auto">
+           <div class="search-bar ms-auto d-flex">
+    <input type="text" placeholder="Search" class="form-control me-2" />
+    <button type="submit" class="btn btn-sm btn-light"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+<!-- Íconos de usuario y carrito -->
+<div class="d-flex align-items-center justify-content-end icon-bar">
+  <!-- Carrito -->
+  <div class="cart-icon position-relative me-3">
+    <a href="Carrito.html" class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">0</span>
+    </a>
+  </div>
+
+
+  <!-- Usuario -->
+ <div class="dropdown user-dropdown">
+    <button class="btn btn-user-icon dropdown-toggle" type="button" id="userMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-user-circle"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userMenuButton">
+      <li><a class="dropdown-item" href="Mi perfil.html"><i class="fas fa-user me-2"></i>Mi perfil</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Favoritos</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-book me-2"></i>Mis libros</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-language me-2"></i>Idioma</a></li>
+      <li class="dropdown-item d-flex justify-content-between align-items-center">
+  <span><i class="fas fa-exchange-alt me-2"></i>Modo:</span>
+  <div class="form-check form-switch m-0">
+    <input class="form-check-input" type="checkbox" id="modoPerfilSwitch">
+  </div>
+</li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Ayuda</a></li>
+   <li>
+  <a class="dropdown-item" href="#" onclick="toggleDarkMode()" id="toggleDarkBtn">
+    <i id="darkModeIcon" class="fa-solid fa-moon"></i> <span id="darkModeText">Modo oscuro</span>
+  </a>
+</li>
+<li><hr class="dropdown-divider"></li>
+
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Salir</a></li>
+    </ul>
+  </div>
+</div>
+    </div>
+   </div>
+  </header>
+
+ <!-- 🌅 Banner -->
+<div class="banner" id="bannerPreview">
+  <div class="banner-placeholder" id="bannerPlaceholder">
+    <i class="fas fa-plus"></i>
+  </div>
+
+  <div class="banner-controls" id="bannerControls">
+    <div class="dropdown-wrapper">
+      <button class="dropdown-btn" onclick="toggleBannerDropdown()">Cambiar imagen</button>
+      <div class="dropdown-options hidden" id="bannerDropdownOptions">
+        <label for="bannerInput">Subir desde dispositivo</label>
+        <button onclick="pegarImagenDesdeLink()">Pegar desde link</button>
+      </div>
+    </div>
+    <button onclick="quitarImagen()">Quitar imagen</button>
+    <button onclick="iniciarReposicion()">Reposicionar</button>
+  </div>
+
+  <input type="file" id="bannerInput" accept="image/*" hidden />
+</div>
+
+<div class="profile-layout">
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <ul class="nav-tabs-sidebar">
+     <li class="nav-item"><a class="nav-link" onclick="showTab('perfil')">Perfil</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showTab('libros')">Mis libros</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showTab('biblioteca')">Biblioteca</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showTab('fandoms')">Fandoms</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showTab('personalizacion')">Personalización</a></li>
+<li style="color: crimson">Salir</li>
+    </ul>
+  </aside>
+
+
+<!-- Contenido principal -->
+<div class="main-content">
+
+  <!-- 🧍 Perfil -->
+  <section id="perfil" class="tab-content active">
+    <div class="profile-card">
+      <label for="profilePicInput">
+        <img src="https://via.placeholder.com/100?text=Usuario+Anonimo" class="profile-pic" id="profilePic" />
+      </label>
+      <input type="file" id="profilePicInput" class="upload-input" accept="image/*" />
+
+      <div class="editable-name-wrapper">
+        <div class="editable-name-container">
+          <h1 id="nombre-usuario" class="editable-name">Nombre de Usuario</h1>
+          <i id="icono-editar-nombre" class="fas fa-pen edit-icon" title="Editar nombre"></i>
+          <input type="text" id="input-nombre-usuario" class="edit-input hidden" />
+        </div>
+      </div>
+
+      <textarea id="userDescription" placeholder="Escribe una descripción sobre ti..."></textarea>
+      <button class="btn-edit">Guardar cambios</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><i class="fas fa-book"></i><p>3 Libros</p></div>
+      <div class="stat"><i class="fas fa-fire"></i><p>4 Racha</p></div>
+    </div>
+  </section>
+
+
+
+    <!-- 📚 Mis libros -->
+<section id="libros" class="tab-content">
+  <h2>Mis Libros</h2>
+     <button onclick="crearLibroNuevo()">➕ Añadir libro</button>
+  <!-- Lista de tarjetas -->
+  <div id="listaLibros" class="grid-libros"></div>
+</section>
+  
+
+<!-- 📋 Modal de edición de libro -->
+<div id="modalEditarLibro" class="modal-overlay hidden">
+  <div class="modal-contenido">
+    <button class="close-modal" onclick="cerrarModal()"><i class="fas fa-times"></i></button>
+    <h2>Editar libro</h2>
+    <label>Título:</label>
+    <input type="text" id="modalTitulo">
+
+    <label>Descripción:</label>
+    <textarea id="modalDescripcion" rows="3"></textarea>
+
+    <label>Progreso:</label>
+    <input type="range" min="0" max="100" id="modalProgreso">
+    <div class="barra-progreso"><div class="progreso" id="modalBarraProgreso"></div></div>
+
+    <label>Color de fondo:</label>
+    <input type="color" id="modalFondo">
+    <label>Color del título:</label>
+<input type="color" id="modalColorTitulo" value="#000000">
+    <label>Portada (link o subir):</label>
+    <input type="text" id="modalPortadaLink" placeholder="Pega un link...">
+    <input type="file" id="modalPortadaArchivo" accept="image/*">
+
+    <h3>Checklist</h3>
+    <div class="checklist" id="modalChecklist">
+      <label><input type="checkbox" id="checkEscrito"> Escrito</label>
+      <label><input type="checkbox" id="checkEditado"> Editado</label>
+      <label><input type="checkbox" id="checkMaquetado"> Maquetado</label>
+      <label><input type="checkbox" id="checkPublicado"> Publicado</label>
+    </div>
+
+    <button onclick="guardarCambiosModal()">💾 Guardar</button>
+    <button onclick="cerrarModal()">Cancelar</button>
+  </div>
+</div>
+
+
+  <!-- 📚 Biblioteca -->
+  <section id="biblioteca" class="tab-content">
+  <h2>Mi Biblioteca</h2>
+  <div class="filtros-biblioteca">
+  <label for="filtroTipo">Filtrar por tipo:</label>
+  <select id="filtroTipo">
+    <option value="todos">Todos</option>
+    <option value="herramienta">Herramientas</option>
+    <option value="articulo">Artículos</option>
+    <option value="libro">Libros</option>
+  </select>
+
+  <div class="tools-grid" id="contenedorBiblioteca">
+</div>
+  <script src="MiBiblioteca.js"></script>
+  </section>
+
+  <!-- 💫 Fandoms -->
+<section id="fandoms" class="tab-content">
+  <h2>Fandoms</h2>
+  <div id="listaFandoms" class="row gy-4"></div>
+</section>
+
+
+  <!-- 🎨 Personalización -->
+  <section id="personalizacion" class="tab-content">
+    <h2>Personalización</h2>
+    <p>Opciones para cambiar tema, colores y diseño del perfil.</p>
+  </section>
+
+</div> 
+</div>
+     <!-- Footer -->
+      <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Síguenos</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/amr.escritoras/" target="_blank"><i class="fab fa-instagram"></i> AMR escritoras</a></li>
+        <li><a href="https://co.pinterest.com/amrescritoras/" target="_blank"><i class="fab fa-pinterest"></i> AMR escritoras</a></li>
+        <li><a href="https://www.facebook.com/amr.escritoras/" target="_blank"><i class="fab fa-facebook"></i> AMR escritoras</a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-youtube"></i> AMR escritoras</a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-tiktok"></i> AMR escritoras</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li><i class="fas fa-envelope"></i> contacto@amrescritoras.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Medellín, Colombia</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>¿Quienes sómos?</h4>
+      <a href="Pagina AMR Escritoras..html">Sobre Nosotras</a>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <p>&copy; 2025 AMR Escritoras. Todos los derechos reservados.</p>
+      <a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-LYOEaNRJWxYtqJCeogQ0K9OAkGJyoDD8xHfU35RQaUVYGq0M+dl+xFli6o1DdK/H" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

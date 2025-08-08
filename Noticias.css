@@ -1,0 +1,96 @@
+
+ body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #06434A;
+    }
+
+    .hero-blog {
+      background-color: #004b4b;
+      color: white;
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    .hero-blog h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-blog p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .blog-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+.tarjeta-blog-horizontal {
+  display: flex;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-blog-horizontal:hover {
+  transform: scale(1.01);
+}
+
+.blog-thumbnail {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.blog-detalle {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-titulo {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: #9dcee4;
+}
+
+.blog-descripcion {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.acciones-blog {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.leer-mas {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.añadir-biblioteca {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.añadir-biblioteca:hover {
+  color: #00ffcc;
+}

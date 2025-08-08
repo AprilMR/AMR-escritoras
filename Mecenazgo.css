@@ -1,0 +1,404 @@
+:root {
+  --verdeazul: #005767;
+  --verdeazul-pastel: #acd0d4;
+  --amarillo: #ffc107;
+  --gris-suave: #f8f9fa;
+  --gris-claro: #c0c4c5;
+  --gris-hover: #b5b5b6;
+  --gris-texto: rgba(0, 87, 103, 0.6);
+  --fuente: 'Roboto', sans-serif;
+  --sombra: rgba(0, 0, 0, 0.05);
+
+  /* Modo oscuro */
+  --bg-dark: #1e1e1e;
+  --card-dark: #2c2c2c;
+  --texto-claro: #f0f0f0;
+  --muted-dark: #aaa;
+}
+/* ====== GENERALES ====== */
+body {
+  font-family: var(--fuente);
+  background-color: white;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--texto-claro);
+}
+
+h2.section-title {
+  font-family: var(--fuente);
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--verdeazul);
+}
+
+body.dark-mode h2.section-title {
+  color: var(--verdeazul-pastel);
+}
+p, li, h5 {
+  font-family: var(--fuente);
+}
+
+
+/* ====== NAV TABS ====== */
+.nav-tabs {
+  border-bottom: 2px solid var(--amarillo);
+  margin-bottom: 1rem;
+}
+
+.nav-tabs .nav-link {
+  color: var(--verdeazul);
+  font-weight: 500;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: transparent;
+  border-color: var(--amarillo);
+  color: var(--amarillo);
+}
+
+.nav-tabs .nav-link.active {
+  border-color: var(--amarillo);
+  color: var(--verdeazul);
+  background-color: var(--gris-suave);
+  border-radius: 4px 4px 0 0;
+}
+
+/* ====== TAB CONTENT ====== */
+.tab-content {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--sombra);
+  padding: 2rem;
+}
+
+/* ====== FORMULARIOS DE LECTURA ====== */
+form select,
+form input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+form button.btn-warning {
+  background-color: var(--amarillo);
+  border: none;
+  color: black;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+form button.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+/* ====== TARJETAS DE LIBRO RECOMENDADO ====== */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--sombra);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--verdeazul);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .card,
+body.dark-mode .stat-box,
+body.dark-mode .sidebar,
+body.dark-mode .dropdown-menu {
+  background-color: var(--card-dark);
+  color: var(--texto-claro);
+}
+
+body.dark-mode .card-title {
+  color: var(--amarillo);
+}
+
+/* ====== PROGRESS BAR MECENAZGO ====== */
+.progress {
+  background-color: #e9ecef;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+}
+
+.progress-bar {
+  font-weight: 600;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====== LISTA DE RESEÑAS ====== */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.list-group-item strong {
+  color: var(--verdeazul);
+}
+
+/* ====== BOTONES EN GENERAL ====== */
+.btn-warning {
+  background-color: var(--amarillo);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+:root {
+  --verdeazul: #005767;
+  --amarillo: #ffc107;
+  --gris-claro: #c0c4c5;
+  --gris-hover: #b5b5b6;
+  --gris-texto: rgba(0, 87, 103, 0.6);
+}
+
+/* ====== MECENAZGO LINE BUTTON ====== */
+.btn-mecenazgo-linea {
+  background-color: rgba(192, 196, 197, 0.3);
+  border: 2px solid rgba(0, 87, 103, 0.2);
+  padding: 10px 18px;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: #b48646;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-mecenazgo-linea:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.titulo-btn-mecenazgo {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: #b48646; /* ocre */
+  background-color: rgba(192, 196, 197, 0.3); /* gris translúcido */
+  padding: 8px 14px;
+  border-radius: 4px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Ícono de flecha */
+.icon-rotate {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  color: #b48646; /* combinando con el ocre */
+}
+
+/* Rota la flecha si está expandido */
+.btn-mecenazgo-linea[aria-expanded="true"] .icon-rotate {
+  transform: rotate(180deg);
+}
+
+/* Contenido colapsado */
+.card.card-body {
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+/* Agrupar botones pegaditos */
+.btn-group-mecenazgo > .btn-mecenazgo-linea {
+  border-radius: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Quitar borde inferior del último */
+.btn-group-mecenazgo > .btn-mecenazgo-linea:last-of-type {
+  border-bottom: 2px solid rgba(0, 87, 103, 0.2);
+  border-radius: 0 0 8px 8px;
+}
+
+.top-right-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1001;
+}
+
+
+/* Contenedor general de los íconos */
+.icon-bar {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1001;
+}
+
+/* Carrito */
+.cart-icon {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.cart-count {
+  background-color: #ffc107;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.btn-user-icon i {
+  color: #ffc107 !important; /* Amarillo vibrante */
+  font-size: 1.5rem !important; /* Tamaño igual al carrito */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+ .btn-user-icon:hover i {
+  color: #fff5cc !important; /* Amarillo claro al pasar el mouse */
+  transform: scale(1.1);
+ }
+ h2.section-title {
+  font-family: var(--fuente);
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1.5rem;
+  color: var(--verdeazul);
+}
+
+body.dark-mode h2.section-title {
+  color: var(--verdeazul-pastel);
+}
+
+/* Opcional: modo oscuro para títulos en secciones especiales */
+.teal-section h2 {
+  color: #ffe6b0 !important;
+}
+
+body.dark-mode .white-section {
+  background-color: var(--card-dark);
+  color: var(--texto-claro);
+}
+
+/* 🌚 Sección: Instrucciones y Botones tipo Dropdown */
+body.dark-mode .btn-mecenazgo-linea {
+  background-color: rgba(50, 50, 50, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--texto-claro);
+}
+
+body.dark-mode .btn-mecenazgo-linea:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .titulo-btn-mecenazgo {
+  background-color: rgba(70, 70, 70, 0.5);
+  color: var(--verdeazul-pastel);
+}
+
+/* 🌚 Sección: Tarjetas de instrucciones desplegables */
+body.dark-mode .card.card-body {
+  background-color: var(--card-dark);
+  color: var(--texto-claro);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌚 Títulos e íconos dentro de tarjetas */
+body.dark-mode h5,
+body.dark-mode .card-title {
+  color: var(--verdeazul-pastel);
+  font-weight: 500;
+}
+
+/* 🌚 Íconos y decorativos */
+body.dark-mode .fa-star,
+body.dark-mode .fa-book-reader,
+body.dark-mode .fa-share-alt,
+body.dark-mode .fa-users,
+body.dark-mode .fa-gift,
+body.dark-mode .fa-user-astronaut,
+body.dark-mode .fa-box-open,
+body.dark-mode .fa-video {
+  color: var(--amarillo);
+}
+
+/* 🌚 Tabs y contenido */
+body.dark-mode .tab-content {
+  background-color: var(--card-dark);
+  color: var(--texto-claro);
+}
+
+/* 🌚 Progreso */
+body.dark-mode .progress {
+  background-color: #333;
+}
+
+body.dark-mode .progress-bar {
+  background-color: var(--amarillo);
+  color: black;
+}
+/* 🌙 h2 en modo oscuro — Verdeazul claro */
+body.dark-mode h2,
+body.dark-mode h2.section-title {
+  color: var(--verdeazul-pastel) !important;
+}
+
+/* 🌙 Menú desplegable (dropdown) en modo oscuro */
+body.dark-mode .dropdown-menu {
+  background-color: var(--card-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .dropdown-item,
+body.dark-mode .dropdown-item i {
+  color: var(--texto-claro) !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--amarillo) !important;
+}

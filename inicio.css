@@ -1,0 +1,312 @@
+
+:root {
+  --verdeazul: #005767;
+  --verdeazul-claro: #acd0d4;
+  --amarillo: #ffc107;
+  --gris-suave: #f8f9fa;
+  --texto: #1a1a1a;
+  --sombra: rgba(0, 0, 0, 0.05);
+  --fuente: 'Roboto', sans-serif;
+
+  /* Modo oscuro */
+  --bg-dark: #1e1e1e;
+  --card-dark: #2c2c2c;
+  --texto-claro: #f0f0f0;
+  --muted-dark: #aaa;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: white;
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--texto-claro);
+}
+.title{
+color:white;
+}
+h1 {
+  color: rgb(6, 67, 74);
+  font-family:'Roboto';
+  font-size: 30px;
+  }
+
+h2 {
+  color: rgb(6, 67, 74);
+  font-family: 'Roboto';
+  font-size: 30px;
+  text-align: center;
+
+  }
+/* SECCIONES */
+.white-section {
+  background-color: white;
+  padding: 60px 20px;
+  color: #333;
+}
+body.dark-mode .white-section {
+  background-color: var(--card-dark);
+  color: var(--texto-claro);
+}
+
+.white-section h2 {
+  color: var(--verdeazul);
+}
+
+.teal-section {
+  background-color: #43757e;
+  padding: 60px 20px;
+  color: var(--amarillo);
+}
+
+.teal-section h2 {
+  color: #ffe6b0;
+}
+
+/* ENLACES PERSONALIZADOS */
+.clean-link,
+.clean-link-banner {
+  position: relative;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  text-decoration: none;
+  color: #8a6006;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.clean-link::after,
+.clean-link-banner::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background-color: #ffc700;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.clean-link:hover::after,
+.clean-link-banner:hover::after {
+  width: 100%;
+}
+
+.clean-link-banner {
+  color: #ffe6b0;
+}
+
+.clean-link-banner {
+  position: relative;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  text-decoration: none;
+  color: #ffe6b0; /* o #000 si tu fondo es claro */
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.clean-link-banner::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background-color: #ffc700; /* tu amarillo característico */
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.clean-link-banner:hover::after {
+  width: 100%;
+}
+
+.carousel-caption.custom-caption {
+    position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 40px; /* Menos padding vertical, más ancho horizontal */
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  width: 85%;
+  max-width: 1000px;
+  text-align: center;
+  line-height: 1.3;
+}
+.custom-caption h1 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+.carousel-caption.right-caption {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 80%;                  /* más delgado */
+  max-width: 1000px;
+  text-align: center;
+  color: rgb(100, 100, 100);
+  line-height: 1.3
+}
+
+.carousel-caption.custom-caption.right-caption h2 {
+  color: #FFD700;              /* amarillo vibrante */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.carousel-caption.custom-caption.right-caption p {
+  color: #FFFAE6;              /* marfil claro */
+  font-size: 1rem;
+}
+
+/* Contenedor general de los íconos */
+.icon-bar {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1001;
+}
+
+/* Carrito */
+.cart-icon {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.cart-count {
+  background-color: #ffc107;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.btn-user-icon i {
+  color: #ffc107 !important; /* Amarillo vibrante */
+  font-size: 1.5rem !important; /* Tamaño igual al carrito */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+ .btn-user-icon:hover i {
+  color: #fff5cc !important; /* Amarillo claro al pasar el mouse */
+  transform: scale(1.1);}
+  
+/* ÍCONOS */
+.icon-bar {
+  color:  #ffc107;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1001;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: var(--amarillo);
+}
+
+.cart-count {
+  background-color: var(--amarillo);
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.btn-user-icon i {
+  color: var(--amarillo) !important;
+  font-size: 1.5rem !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-user-icon:hover i {
+  color: #fff5cc !important;
+  transform: scale(1.1);
+}
+/* Íconos dentro de tarjetas */
+.card-body i,
+.white-section i,
+.teal-section i {
+  color: var(--amarillo);
+}
+
+/* Títulos dentro de tarjetas */
+.card-body h5,
+.white-section h5,
+.teal-section h5 {
+  color: var(--amarillo);
+}
+
+/* En modo oscuro también mantenlos amarillos */
+body.dark-mode .card-body i,
+body.dark-mode .white-section i,
+body.dark-mode .teal-section i,
+body.dark-mode .card-body h5,
+body.dark-mode .white-section h5,
+body.dark-mode .teal-section h5 {
+  color: var(--amarillo);
+}
+
+/* 🌙 Versión para modo oscuro */
+body.dark-mode .clean-link,
+body.dark-mode .clean-link-banner {
+  color: #ffd87a; /* amarillo pastel */
+}
+
+body.dark-mode .clean-link:hover,
+body.dark-mode .clean-link-banner:hover {
+  color: #fff4cc; /* más claro al hover */
+}
+
+/* Estilo general para h2 de sección */
+.section-title {
+  font-family: var(--fuente);
+  font-size: 2rem;
+  font-weight: 500;          /* más ligero */
+  color: var(--verdeazul);
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+/* 🌙 En modo oscuro: usa un tono pastel */
+body.dark-mode .section-title {
+  color: var(--verdeazul-claro); /* por ejemplo: #acd0d4 o #a7ced4 */
+}
+.teal-section h2 {
+  color: #ffc107 !important; /* Amarillo vibrante */
+}

@@ -1,0 +1,887 @@
+:root {
+  --bg-light: #f4f4f4;
+  --bg-dark: #1e1e1e;
+  --card-light: #ffffff;
+  --card-dark: #2e2e2e;
+  --text-light: #1a1a1a;
+  --text-dark: #f0f0f0;
+  --accent: #7ca59d;
+  --highlight: #ffd95e;
+  --danger: #ff6565;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Títulos */
+h2.section-title {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--verdeazul);
+}
+
+body.dark-mode h2.section-title,
+body.dark-mode h2,
+body.dark-mode .profile-info h2 {
+  color: var(--verdeazul-pastel) !important;
+}
+
+/* Tipografía base */
+p, li, h5 {
+  font-family: var(--fuente);
+}
+
+/* Layout principal */
+.container,
+.profile-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: none;
+  padding: 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.profile-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+}
+
+body.dark-mode .profile-layout {
+  background-color: #2a2a2a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: var(--texto-claro);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  min-height: 100%;
+  padding: 2rem 1rem;
+  background-color: var(--card-light);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--accent);
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: var(--highlight);
+  color: white;
+}
+
+body.dark-mode .sidebar {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .sidebar li {
+  background-color: #3a3a3a;
+  color: var(--texto-claro);
+}
+
+body.dark-mode .sidebar li:hover {
+  background-color: var(--highlight);
+  color: black;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: calc(100% - 220px);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: var(--card-light);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: -50px 0 2rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+body.dark-mode .profile-card {
+  background-color: var(--card-dark);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
+}
+
+.profile-card h1 {
+  margin: 0.3rem 0;
+}
+
+.profile-card textarea {
+  width: 80%;
+  max-width: 400px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.btn-edit,
+.upload-label,
+button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  margin: 0.5rem 0.3rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.upload-label:hover,
+button:hover {
+  background-color: var(--highlight);
+  color: #000;
+}
+
+.upload-input,
+.banner input {
+  display: none;
+}
+
+/* Banner */
+.banner {
+  position: relative; /* 👈 esto es clave para que .banner-actions se ubique bien */
+  width: 100%;
+  height: 200px;
+  background-color: #7b8382;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  background-color: var(--card-light);
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .stat {
+  background-color: var(--card-dark);
+  box-shadow: 0 0 10px rgba(255,255,255,0.03);
+}
+
+.stat i {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+body.dark-mode .stat-box {
+  background-color: var(--card-dark);
+  color: var(--texto-claro);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .stat-box i {
+  color: var(--amarillo);
+}
+
+/* Tabs */
+.tab-content {
+  display: none;
+  margin-top: 2rem;
+  max-width: 600px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-buttons button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Toggle Mode */
+.toggle-mode {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.toggle-mode button {
+  background-color: var(--highlight);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Iconos en modo oscuro */
+body.dark-mode .profile-section i,
+body.dark-mode .profile-section .fa,
+body.dark-mode .profile-section .fas,
+body.dark-mode .profile-section .far,
+body.dark-mode .profile-section .fab {
+  color: #ffc107 !important;
+}
+
+body.dark-mode .profile-section i:hover {
+  color: #fff5cc !important;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Utilidades */
+.hidden {
+  display: none;
+}
+
+.content-box {
+  margin-top: 2rem;
+}
+.banner-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.banner-actions button,
+.banner-actions label {
+  background-color: var(--highlight);
+  color: black;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.banner-placeholder {
+  font-size: 2rem;
+  color: white;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.banner-actions,
+.profile-actions {
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 100;
+  top: 10px;
+  right: 10px;
+}
+.banner-actions.hidden {
+  display: none;
+}
+
+.profile-actions button,
+.banner-actions button {
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.tab-content {
+  transition: opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+#bannerPreview {
+  background-size: cover;
+  background-position: center;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #7b8382;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.banner-placeholder {
+  font-size: 2.5rem;
+  color: white;
+  opacity: 0.4;
+  text-align: center;
+  line-height: 200px;
+}
+
+.banner-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.banner:hover .banner-controls {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.banner-controls button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.banner-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.banner.has-image:hover .banner-controls {
+  opacity: 1;
+  pointer-events: auto;
+}
+.banner-placeholder.hidden {
+  display: none;
+}
+.banner-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.banner.has-image:hover .banner-controls {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.banner-controls button,
+.dropdown-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* Dropdown desplegable */
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  z-index: 20;
+  min-width: 180px;
+}
+
+.dropdown-options button,
+.dropdown-options label {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+}
+
+.dropdown-options button:hover,
+.dropdown-options label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-options.hidden {
+  display: none;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+.banner-controls button,
+.dropdown-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.edit-input.hidden {
+  display: none;
+}
+
+.editable-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.editable-name {
+  margin: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.nav-tabs-sidebar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-tabs-sidebar li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-tabs-sidebar li:hover {
+  background-color: var(--highlight);
+  color: black;
+}
+
+/* Estilo para la pestaña activa */
+.nav-tabs-sidebar li.active {
+  background-color: var(--highlight);
+  color: black;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo oscuro */
+body.dark-mode .nav-tabs-sidebar li {
+  background-color: #3a3a3a;
+  color: var(--text-dark);
+}
+
+body.dark-mode .nav-tabs-sidebar li:hover,
+body.dark-mode .nav-tabs-sidebar li.active {
+  background-color: var(--highlight);
+  color: black;
+}
+.tab-content h2 {
+  color: var(--text-light);
+}
+
+body.dark-mode .tab-content h2 {
+  color: var(--text-dark);
+}
+
+/* Grid container */
+.grid-libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Tarjeta base */
+.libro-card {
+  background-color: var(--card-light);
+  color: var(--text-light);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.libro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de portada */
+.libro-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del libro */
+.libro-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Descripción */
+.libro-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Barra de progreso */
+.barra-progreso {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.barra-progreso .progreso {
+  height: 100%;
+  background-color: var(--highlight);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+/* Checklist con iconos */
+.libro-card .checklist {
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+/* Botón editar */
+.libro-card button {
+  align-self: flex-end;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.libro-card button:hover {
+  background-color: var(--highlight);
+  color: black;
+}
+
+/* Modo oscuro */
+body.dark-mode .libro-card {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .libro-card h3 {
+  color: var(--verdeazul-pastel);
+}
+
+body.dark-mode .barra-progreso {
+  background-color: #444;
+}
+
+body.dark-mode .barra-progreso .progreso {
+  background-color: var(--highlight);
+}
+
+body.dark-mode .libro-card button {
+  background-color: var(--verdeazul-pastel);
+}
+
+body.dark-mode .libro-card button:hover {
+  background-color: var(--highlight);
+  color: black;
+}
+@media (min-width: 1024px) {
+  .grid-libros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-contenido {
+  background-color: var(--card-light, #fff);
+  color: var(--text-light, #000);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+body.dark-mode .modal-contenido {
+  background-color: var(--card-dark, #2e2e2e);
+  color: var(--text-dark, #fff);
+}
+
+.modal-contenido label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal-contenido input,
+.modal-contenido textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.modal-contenido button {
+  margin-top: 1.5rem;
+  margin-right: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-contenido button:hover {
+  background-color: var(--highlight);
+  color: black;
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--danger);
+}
+    .tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* fijo, 3 columnas */
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1000px; /* o lo que se ajuste bien a tu diseño */
+  margin: 0 auto; /* centrado */
+}
+    .tools-row {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-behavior: smooth;
+      padding-bottom: 1rem;
+    }
+    .tool-card {
+      min-width: 250px;
+      height: 180px;
+      position: relative;
+      border-radius: 10px;
+       padding-bottom: 2.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      
+    }
+    .tool-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .tool-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+      transition: opacity 0.3s ease;
+    }
+    .tool-card:hover .overlay {
+      opacity: 1;
+    }
+.tool-card:hover .añadir-biblioteca {
+  opacity: 1;
+}
+
+body.dark-mode .text-muted {
+  color: #cccccc !important; /* Mucho más visible */
+}
