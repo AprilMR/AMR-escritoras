@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Inicio </title>
+    <link rel="icon" href="logos/amr_logo-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="inicio.css"> 
+     <link rel="stylesheet" type="text/css" href="Global.css"> 
+    <script src="Global.js"></script>
+   
+    <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <div class="row" style="background-color: #005767">
+        <header>
+      <div class="col-4">
+        <img class="logo" style="display: inline-block;" alt="" src="logos/amr_logo-removebg-preview.png"/> 
+        <h1 class="title" style="display: inline-block; font-family:'Roboto';"> AMR <br> Escritoras</h1> 
+      </div>
+      
+    <nav class="d-flex flex-wrap gap-3">
+   <a href="Inicio AMR.html" class="menu">Inicio</a>
+  <a href="Mecenazgo.html" class="menu">Mecenazgo</a>
+  <a href="Noticias AMR.html" class="menu">Blog</a>
+  <a href="Tienda AMR.html" class="menu">Productos</a>
+  <a href="Servicios AMR.html" class="menu">Servicio Editorial</a>
+  <a href="Fandoms AMR.html" class="menu">Fandoms</a>
+  <a href="Herramientas.html" class="menu">Herramientas</a>
+</nav>
+      <div class="col-4 ms-auto">
+           <div class="search-bar ms-auto d-flex">
+    <input type="text" placeholder="Search" class="form-control me-2" />
+    <button type="submit" class="btn btn-sm btn-light"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+</div>
+<!-- Íconos de usuario y carrito -->
+<div class="d-flex align-items-center justify-content-end icon-bar">
+  <!-- Carrito -->
+  <div class="cart-icon position-relative me-3">
+    <a href="Carrito.html" class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">0</span>
+    </a>
+  </div>
+
+  <!-- Usuario -->
+<div class="dropdown">
+  <button class="btn btn-user-icon dropdown-toggle" type="button" id="userMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fas fa-user-circle"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuButton">
+      <li><a class="dropdown-item" href="Mi perfil.html"><i class="fas fa-user me-2"></i>Mi perfil</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Favoritos</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-book me-2"></i>Mis libros</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-language me-2"></i>Idioma</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Ayuda</a></li>
+   <li>
+  <a class="dropdown-item" href="#" onclick="toggleDarkMode()" id="toggleDarkBtn">
+    <i id="darkModeIcon" class="fa-solid fa-moon"></i> <span id="darkModeText">Modo oscuro</span>
+  </a>
+</li>
+<li><hr class="dropdown-divider"></li>
+
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Salir</a></li>
+    </ul>
+  </div>
+</div>
+   </div>
+   </div>
+  </header>
+
+<!-- 🎯 HERO SLIDES -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="banners/“Todo libro tiene su lector”.png" class="d-block w-100" alt="Banner 1">
+        <div class="banner-overlay d-flex justify-content-center align-items-center">
+      <div class="carousel-caption custom-caption text-center d-none d-md-block ">
+        <h1 class="display-5">Te ayudamos a hacer tu historia brillar y a encontrar tus lectores.</h1>
+        <a href="tu-pagina-de-servicios-o-contacto.html" class="clean-link-banner">
+     Quiero publicar mi historia
+     </a>
+      </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+  <img src="banners/Nuestros libros.png" class="d-block w-100" alt="Noticias">
+  <div class="banner-overlay">
+    <div class="carousel-caption custom-caption right-caption text-center d-none d-md-block">
+      <p>Explora nuestras últimas publicaciones y eventos.</p>
+      <a href="catalogo.html" class="clean-link-banner">Ver nuestros libros</a>
+    </div>
+  </div>
+</div>
+    <div class="carousel-item">
+      <img src="banners/“Todo libro tiene su lector” (1).png" class="d-block w-100" alt="Concursos">
+        <div class="banner-overlay d-flex justify-content-center align-items-center">
+      <div class="carousel-caption custom-caption text-center d-none d-md-block ">
+        <p>¡Demuestra tu talento y únete a nuestras iniciativas!</p>
+        <a href="#concurso" class="clean-link-banner">
+     Conocer más
+     </a>
+      </div>
+    </div>
+  </div>
+ 
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<!-- 💡 SOBRE NOSOTRAS RESUMEN -->
+ <section class="white-section">
+<section class="container py-5">
+  <h2 class="section-title">¿Quiénes somos?  
+    <span class="d-block mx-auto mt-2" style="width: 60px; height: 3px; background-color: #ffd700;"></span></h2>
+  <p class="text-center">A.M.R. Escritoras es un colectivo de madre e hija dedicado a ayudar a escritores independientes a publicar, editar y compartir sus historias con el mundo. Creemos que toda historia merece ser contada.</p>
+  <div class="text-center mt-3">
+    <a href="Pagina AMR Escritoras..html" class="clean-link">Conócenos</a>
+  </div>
+</section>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 🔥 SERVICIOS DESTACADOS -->
+ <section class="teal-section">
+<section class="container py-5">
+  <h2 class="section-title text-center mb-5">Nuestros servicios
+     <span class="d-block mx-auto mt-2" style="width: 60px; height: 3px; background-color: #ffd700;"></span></h2>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <i class="fas fa-book fa-2x mb-3"></i>
+          <h5>Corrección y edición</h5>
+          <p>Ortografía, estilo y revisión literaria con amor y cuidado.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <i class="fas fa-paint-brush fa-2x mb-3"></i>
+          <h5>Diseño editorial</h5>
+          <p>Carátulas, diagramación e identidad visual para tus libros.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <i class="fas fa-users fa-2x mb-3"></i>
+          <h5>Mecenazgo XXI</h5>
+          <p>Una red de lectores y promotores literarios por amor al arte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section> 
+<!-- 🔧 NUEVA SECCIÓN: Herramientas para escritores -->
+<section class="white-section">
+  <div class="container py-5">
+    <h2 class="section-title">Herramientas para escritores
+       <span class="d-block mx-auto mt-2" style="width: 60px; height: 3px; background-color: #ffd700;"></span></h2>
+    <div class="section-divider"></div>
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-user-pen fa-2x mb-3"></i>
+        <h5 class="fw-bold">Creación de personajes</h5>
+        <p>Define nombres, historias y arcos narrativos únicos.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-scroll fa-2x mb-3"></i>
+        <h5 class="fw-bold">Plantillas descargables</h5>
+        <p>Organiza capítulos, escenas, fichas de personaje y más.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-brain fa-2x mb-3"></i>
+        <h5 class="fw-bold">Consejos de escritura</h5>
+        <p>Tips y artículos para mejorar tu narrativa y estilo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 NUEVA SECCIÓN: Del blog -->
+<section class="teal-section">
+  <div class="container py-5">
+    <h2 class="section-title">Blog 
+      <span class="d-block mx-auto mt-2" style="width: 60px; height: 3px; background-color: #ffd700;"></span>
+    </h2>
+    <div class="row mt-4">
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">¿Cómo construir una villana inolvidable?</h5>
+            <p class="card-text">Exploramos qué hace que un antagonista sea irresistible y multidimensional.</p>
+            <a href="#" class="clean-link">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Errores comunes al autopublicar (y cómo evitarlos)</h5>
+            <p class="card-text">Desde malas portadas hasta edición descuidada: esto es lo que debes saber.</p>
+            <a href="#" class="clean-link">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🧡 NUEVA SECCIÓN: Zona fandom -->
+<section class="white-section">
+  <div class="container py-5 text-center">
+    <h2 class="section-title">Zona Fandom 
+      <span class="d-block mx-auto mt-2" style="width: 60px; height: 3px; background-color: #ffd700;"></span>
+    </h2>
+    <p>Explora contenido extendido de nuestros libros: playlists, mapas, curiosidades y más.</p>
+    <a href="Fandoms AMR.html" class="clean-link">Ir a Fandoms</a>
+  </div>
+</section> 
+
+
+<!-- 🌈 CTA FINAL -->
+ <section class="white-section">
+  <div class="container py-5 text-center">
+  <h2 class="section-title mb-3">¿Listo para publicar tu historia? 
+    <span class="d-block mx-auto mt-2" style="width: 60px; height: 3px; background-color: #ffd700;"></span></h2>
+  <p>Te ayudamos en cada paso del camino. ¡Forma parte de A.M.R. escritoras!</p>
+  <a href="Servicios AMR.html" class="clean-link">Explora nuestros servicios</a>
+ </div>
+</section>
+
+  
+    
+     <!-- Footer -->
+      <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Síguenos</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/amr.escritoras/" target="_blank"><i class="fab fa-instagram"></i> AMR escritoras</a></li>
+        <li><a href="https://co.pinterest.com/amrescritoras/" target="_blank"><i class="fab fa-pinterest"></i> AMR escritoras</a></li>
+        <li><a href="https://www.facebook.com/amr.escritoras/" target="_blank"><i class="fab fa-facebook"></i> AMR escritoras</a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-youtube"></i> AMR escritoras</a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-tiktok"></i> AMR escritoras</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li><i class="fas fa-envelope"></i> contacto@amrescritoras.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Medellín, Colombia</li>
+      </ul>
+    </div>
+      <div class="footer-column">
+      <h4>¿Quienes sómos?</h4>
+      <a href="Pagina AMR Escritoras..html">Sobre Nosotras</a>
+    </div>
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <p>&copy; 2025 AMR Escritoras. Todos los derechos reservados.</p>
+      <a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-LYOEaNRJWxYtqJCeogQ0K9OAkGJyoDD8xHfU35RQaUVYGq0M+dl+xFli6o1DdK/H" crossorigin="anonymous"></script>
+</body>
+</html>
